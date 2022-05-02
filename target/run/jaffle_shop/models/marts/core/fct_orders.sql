@@ -2,25 +2,11 @@
 
       create or replace transient table analytics.dbt_rjoshi.fct_orders  as
       (with orders as  (
-        select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from raw.jaffle_shop.orders
+    select * from analytics.dbt_rjoshi.stg_orders
 ),
 
 payments as (
-    select
-    id as payment_id,
-    orderid as order_id,
-    paymentmethod as payment_method,
-    status,
-    -- amount is stored in cents, convert it to dollars
-    round( 1.0 * amount / 100, 4) as amount,
-    created as created_at
-from raw.stripe.payment
+    select * from analytics.dbt_rjoshi.stg_payments
 ),
 
 order_payments as (
