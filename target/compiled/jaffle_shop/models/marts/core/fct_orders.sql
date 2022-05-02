@@ -1,9 +1,9 @@
 with orders as  (
-    select * from analytics.dbt_rjoshi.stg_orders
+    select * from analytics.DBT_RJOSHI.stg_orders
 ),
 
 payments as (
-    select * from analytics.dbt_rjoshi.stg_payments
+    select * from analytics.DBT_RJOSHI.stg_payments
 ),
 
 order_payments as (

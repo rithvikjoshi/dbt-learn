@@ -1,9 +1,9 @@
 with orders as  (
-    select * from {{ ref('stg_orders' )}}
+    select * from analytics.DBT_RJOSHI.stg_orders
 ),
 
 payments as (
-    select * from {{ ref('stg_payments') }}
+    select * from analytics.DBT_RJOSHI.stg_payments
 ),
 
 order_payments as (
