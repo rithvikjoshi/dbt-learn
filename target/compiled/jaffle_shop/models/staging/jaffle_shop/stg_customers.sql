@@ -5,7 +5,7 @@ with customers as (
         first_name,
         last_name
 
-    from RAW.JAFFLE_SHOP.customers
+    from raw.jaffle_shop.customers
 
 )
 
