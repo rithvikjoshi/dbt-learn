@@ -2,7 +2,7 @@
 
       create or replace transient table analytics.dbt_rjoshi.dim_customers  as
       (with customers as (
-    select * from analytics.dbt_rjoshi.stg_customers
+    select * from analytics.DBT_RJOSHI.stg_customers
 ),
 orders as (
     select * from analytics.DBT_RJOSHI.fct_orders

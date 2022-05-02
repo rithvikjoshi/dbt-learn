@@ -1,5 +1,5 @@
 with customers as (
-    select * from {{ ref('stg_customers')}}
+    select * from analytics.DBT_RJOSHI.stg_customers
 ),
 orders as (
     select * from analytics.DBT_RJOSHI.fct_orders
