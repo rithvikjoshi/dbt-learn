@@ -2,11 +2,11 @@
 
       create or replace transient table analytics.dbt_rjoshi.fct_orders  as
       (with orders as  (
-    select * from analytics.DBT_RJOSHI.stg_orders
+    select * from analytics.dbt_rjoshi.stg_orders
 ),
 
 payments as (
-    select * from analytics.DBT_RJOSHI.stg_payments
+    select * from analytics.dbt_rjoshi.stg_payments
 ),
 
 order_payments as (

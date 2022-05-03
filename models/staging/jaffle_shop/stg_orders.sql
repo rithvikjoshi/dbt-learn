@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from RAW.JAFFLE_SHOP.orders
+    from {{source('jaffle_shop','orders')}}
 
 )
 

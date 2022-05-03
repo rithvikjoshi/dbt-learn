@@ -10,7 +10,7 @@
         order_date,
         status
 
-    from RAW.JAFFLE_SHOP.orders
+    from raw.jaffle_shop.orders
 
 )
 
