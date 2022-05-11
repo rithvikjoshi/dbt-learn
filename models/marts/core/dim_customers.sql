@@ -4,7 +4,6 @@ with customers as (
 orders as (
     select * from {{ ref('fct_orders')}}
 ),
-hu hu
 customer_orders as (
     select
         customer_id,
