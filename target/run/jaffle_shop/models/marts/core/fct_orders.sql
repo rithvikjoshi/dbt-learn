@@ -1,9 +1,12 @@
-with orders as  (
-    select * from {{ref('stg_orders')}}
+
+
+      create or replace transient table analytics.dbt_rjoshi.fct_orders  as
+      (with orders as  (
+    select * from analytics.dbt_rjoshi.stg_orders
 ),
 
 payments as (
-    select * from {{ref('stg_payments')}}
+    select * from analytics.dbt_rjoshi.stg_payments
 ),
 
 order_payments as (
@@ -28,3 +31,5 @@ final as (
 )
 
 select * from final
+      );
+    
